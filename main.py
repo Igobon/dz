@@ -15,6 +15,8 @@
 # ■ Суму елементів, що знаходяться між першим та останнім позитивними елементами.
 
 
+print("Start task 1")
+# ■ Суму негативних чисел;
 import random
 
 numbers = []
@@ -27,65 +29,112 @@ print(numbers)
 
 
 
-numbers_sum = 0
-# ■ Суму негативних чисел;
+negative_sum = 0
+
 for i in range(NUMBERS_LENGTH):
     if numbers[i]<0:
-        numbers_sum += numbers[i]
-
+        negative_sum += numbers[i]
+print(f"negative_sum= {negative_sum}")
 # ■ Суму парних чисел;
-double_num=0
-print(f"Result numbers_minus: {numbers_sum}")
+import random
+
+numbers = []
+NUMBERS_LENGTH = 10
+
+for i in range(NUMBERS_LENGTH):
+    numbers.append(random.randint(-10, 10))
+
+print(numbers)
+
+sum_even_numbers=0
+
 for i in range(NUMBERS_LENGTH):
     if numbers[i]%2==0:
-        double_num += numbers[i]
-print(f"Suma double numbers{double_num}")
+        sum_even_numbers += numbers[i]
+print(f"sum_even_numbers= {sum_even_numbers}")
 
 # ■ Суму непарних чисел;
-not_double_number=0
+import random
+
+numbers = []
+NUMBERS_LENGTH = 10
+
+for i in range(NUMBERS_LENGTH):
+    numbers.append(random.randint(-10, 10))
+
+print(numbers)
+sum_not_even_numbers=0
 for i in range(NUMBERS_LENGTH):
     if numbers[i]%2==1:
-        not_double_number +=numbers[i]
-print(f"Not double numbers{not_double_number}")
+        sum_not_even_numbers +=numbers[i]
+print(f"Sum_not_even_numbers= {sum_not_even_numbers}")
 
 # ■ Добуток елементів з кратними індексами 3;
+import random
 
+numbers = []
+NUMBERS_LENGTH = 10
+
+for i in range(NUMBERS_LENGTH):
+    numbers.append(random.randint(-10, 10))
+
+print(numbers)
 n1=numbers [3]
 n2=numbers [6]
 n3=numbers [9]
-dob=n1*n2*n3
+dobutok=n1*n2*n3
 
-print(f'dobutok{dob}')
+print(f'Dobutok index/3= {dobutok}')
 
 
 
 # ■ Добуток елементів між мінімальним та максимальним елементом;
+import random
 
+numbers = []
+NUMBERS_LENGTH = 10
+
+for i in range(NUMBERS_LENGTH):
+    numbers.append(random.randint(-10, 10))
+
+print(numbers)
 
 min_n=min(numbers)
 max_n=max(numbers)
 dobutok=min_n*max_n
-print(f"dobutok{dobutok}")
+print(f"minimal_number= {min_n}")
+print(f"max_number= {max_n}")
+print(f"dobutok= {dobutok}")
 
 
 # ■ Суму елементів, що знаходяться між першим та останнім позитивними елементами.
-first_number=0
-second_number=0
+import random
+
+numbers = []
+NUMBERS_LENGTH = 10
+
+for i in range(NUMBERS_LENGTH):
+    numbers.append(random.randint(-10, 10))
+
+print(numbers)
+
+first_positive_number=0
+last_positive_number=0
 for i in range(NUMBERS_LENGTH):
     if numbers[i]>0:
-        first_number=i
+        first_positive_number=i
         break
 for i in range(NUMBERS_LENGTH-1,-1,-1):
     if numbers [i]>0:
-        second_number=i
+        last_positive_number=i
         break
-print(f"first number{first_number}")
-print(f"last number{second_number}")
+print(f"first_positive_number= {first_positive_number}")
+print(f"last_positive_number= {last_positive_number}")
 sum_numb=0
-for i in range(first_number+1,second_number):
+for i in range(first_positive_number+1,last_positive_number):
     sum_numb+=numbers[i]
-print(f"suma{sum_numb}")
-
+print(f"suma= {sum_numb}")
+print("Task number 2")
 # Завдання 2
 #
 # Є список цілих, заповнений випадковими числами.
@@ -100,6 +149,8 @@ print(f"suma{sum_numb}")
 #
 # ■ Створити список цілих, що містить лише позитивні числа з першого списку.
 
+
+# ■ Створити список цілих, що містить лише парні числа з першого списку;
 import random
 
 numbers = []
@@ -109,33 +160,67 @@ for i in range(LIST):
     numbers.append(random.randint(-10, 10))
 
 print(numbers)
-# ■ Створити список цілих, що містить лише парні числа з першого списку;
-n11=[]
-i
+
+even_numbers=[]
+
 for i in range(LIST):
     if numbers[i]%2==0:
 
-        n11=numbers[i]
+        even_numbers=numbers[i]
 
-        print(n11,end=", ")
-print()
+        print(even_numbers,end=", ")
+print("even_numbers")
+
+
 # ■ Створити список цілих, що містить лише непарні числа з першого списку;
-n12=[]
+numbers = []
+LIST= 10
+
+for i in range(LIST):
+    numbers.append(random.randint(-10, 10))
+
+print(numbers)
+not_even_numbers=[]
 for i in range(LIST):
     if  numbers[i]%2==1:
-        n12=numbers[i]
-        print( n12,end=", ")
-print()
+        not_even_numbers=numbers[i]
+        print( not_even_numbers,end=", ")
+print("not_even_numbers")
+
+
 # ■ Створити список цілих, що містить лише негативні числа з першого списку;
-n13=[]
+import random
+
+numbers = []
+LIST= 10
+
+for i in range(LIST):
+    numbers.append(random.randint(-10, 10))
+
+print(numbers)
+
+negative_numbers=[]
 for i in range(LIST):
     if numbers[i]<0:
-        n13=numbers[i]
-        print(n13,end=", ")
-print()
+        negative_numbers=numbers[i]
+        print(negative_numbers,end=", ")
+print("negative_numbers")
+
+
 # ■ Створити список цілих, що містить лише позитивні числа з першого списку.
-n14=[]
+import random
+
+numbers=[]
+LIST=10
+for i in range(LIST):
+    numbers.append(random.randint(-10, 10))
+
+print(numbers)
+
+
+positive_numbers=[]
 for i in range(LIST):
     if numbers[i]>0:
-        n14=numbers[i]
-        print(n14,end=", ")
+        positive_numbers=numbers[i]
+        print(positive_numbers,end=", ")
+print("positive_numbers")
